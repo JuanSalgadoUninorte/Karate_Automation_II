@@ -1,0 +1,13 @@
+{
+  "sunrise": "#string",
+  "lng": "#number",
+  "countryCode": "CO",
+  "gmtOffset": -5,
+  "rawOffset": -5,
+  "sunset": "#string",
+  "timezoneId": "America/Bogota",
+  "dstOffset": -5,
+  "countryName": "Colombia",
+  "time": "#string",
+  "lat": 4
+}

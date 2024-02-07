@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/geonames\/get\/geographical_data-get[1.1:17]","start":1707189230764,"end":1707189231902,"title":"src\/test\/java\/geonames\/get\/geographical_data-get[1.1:17] 22:13:50.764-22:13:51.902 Get geographical data of a country"},{"id":2,"group":1,"content":"src\/test\/java\/geonames\/get\/geographical_data-get[1.2:18]","start":1707189231907,"end":1707189232295,"title":"src\/test\/java\/geonames\/get\/geographical_data-get[1.2:18] 22:13:51.907-22:13:52.295 Get geographical data of a country"},{"id":3,"group":1,"content":"src\/test\/java\/geonames\/get\/geographical_data-get[1.3:19]","start":1707189232300,"end":1707189232711,"title":"src\/test\/java\/geonames\/get\/geographical_data-get[1.3:19] 22:13:52.300-22:13:52.711 Get geographical data of a country"},{"id":4,"group":1,"content":"src\/test\/java\/geonames\/get\/geographical_data-get[1.4:20]","start":1707189232717,"end":1707189233113,"title":"src\/test\/java\/geonames\/get\/geographical_data-get[1.4:20] 22:13:52.717-22:13:53.113 Get geographical data of a country"},{"id":5,"group":1,"content":"src\/test\/java\/geonames\/get\/geographical_data-get[1.5:21]","start":1707189233118,"end":1707189233502,"title":"src\/test\/java\/geonames\/get\/geographical_data-get[1.5:21] 22:13:53.118-22:13:53.502 Get geographical data of a country"},{"id":6,"group":1,"content":"src\/test\/java\/geonames\/get\/geographical_data-get[1.6:22]","start":1707189233505,"end":1707189233901,"title":"src\/test\/java\/geonames\/get\/geographical_data-get[1.6:22] 22:13:53.505-22:13:53.901 Get geographical data of a country"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
